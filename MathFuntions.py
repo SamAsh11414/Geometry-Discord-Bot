@@ -1,4 +1,4 @@
-import discord, asyncio, io, os, Commands
+import io, os, Commands
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import linregress
