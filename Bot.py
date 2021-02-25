@@ -1,9 +1,5 @@
-import discord, asyncio, io, os, Commands
-import matplotlib.pyplot as plt
-import numpy as np
-from scipy.stats import linregress
+import discord, Commands, LoadJson
 
-TOKEN = ('ODE0MjMzNzgzNTkwMTkxMTA0.YDa4TQ.IYTJKsLLg3SOLGF-c4rgspe_fWU')
 client = discord.Client()
 prefix = '+'
 
@@ -16,4 +12,4 @@ async def on_message(message):
     if message.content.startswith(prefix + "Slope"):
         await Commands.Slope(message, prefix, client)
 
-client.run(TOKEN)
+client.run(LoadJson.JsonToken()[0]["TOKEN"])
