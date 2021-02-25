@@ -15,9 +15,5 @@ async def on_ready():
 async def on_message(message):
     if message.content.startswith(prefix + "Slope"):
         await Commands.Slope(message, prefix, client)
-        
-
-
-
 
 client.run(TOKEN)

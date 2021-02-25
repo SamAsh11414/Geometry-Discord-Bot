@@ -1,4 +1,4 @@
-import discord, asyncio, io, os, Commands
+import discord, asyncio, io, os, Commands, MathFuntions
 import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import linregress
@@ -30,12 +30,7 @@ async def Slope(message, prefix, client):
     print(X1.content + X2.content + Y2.content + Y1.content)
     plt.style.use('dark_background')
     plt.plot([X1.content,Y1.content,X2.content,Y2.content])
-    X1con = int(X1.content)
-    Y1con = int(Y1.content)
-    X2con = int(X2.content)
-    Y2con = int(Y2.content)
-    X = [X1con, X2con]
-    Y = [Y1con, Y2con]
+
     plt.savefig('images/graph.png')
     with open('images/graph.png', 'rb') as f:
         image = discord.File(f, filename='graph.png')
