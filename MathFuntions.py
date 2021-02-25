@@ -14,5 +14,7 @@ async def Intconversion(X1, X2, Y1, Y2):
         print("int was a str")
     X = [X1con, X2con]
     Y = [Y1con, Y2con]
-    convert.append({"X1con": X1con, "Y1con": Y1con, "X2con": X2con, "Y2con": Y2con, "X": X, "Y": Y})
+    answer = linregress(X, Y)
+    slope = answer.slope
+    convert.append({"slope": slope})
     return convert
