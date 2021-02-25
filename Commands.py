@@ -33,7 +33,7 @@ async def Slope(message, prefix, client):
 async def SlopeAnswer(message, client, X1, X2, Y1, Y2):
     MF = await MathFuntions.Intconversion(X1, X2, Y1, Y2)
     await message.channel.send("The Slope is:" )
-    await message.channel.send(MF[0]["Slope"])
+    await message.channel.send(MF[0]["slope"])
 
 async def PlottingSlope(message, client, X1, Y1, X2, Y2):
     plt.style.use('dark_background')
